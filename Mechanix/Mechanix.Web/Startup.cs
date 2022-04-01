@@ -26,6 +26,7 @@ namespace Mechanix.Web
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            services.AddMemoryCache();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
