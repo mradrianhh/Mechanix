@@ -12,7 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mechanix.API", "Mechanix.API\Mechanix.API.csproj", "{02B7695E-2BE0-4567-B348-71AFD0B50BFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mechanix.API", "Mechanix.API\Mechanix.API.csproj", "{02B7695E-2BE0-4567-B348-71AFD0B50BFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mechanix.AdminWeb", "Mechanix.AdminWeb\Mechanix.AdminWeb.csproj", "{05B8B615-A3B2-4037-9F68-3F6642C35A4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{02B7695E-2BE0-4567-B348-71AFD0B50BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02B7695E-2BE0-4567-B348-71AFD0B50BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02B7695E-2BE0-4567-B348-71AFD0B50BFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05B8B615-A3B2-4037-9F68-3F6642C35A4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05B8B615-A3B2-4037-9F68-3F6642C35A4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05B8B615-A3B2-4037-9F68-3F6642C35A4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05B8B615-A3B2-4037-9F68-3F6642C35A4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
