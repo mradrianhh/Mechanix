@@ -5,12 +5,13 @@ using System.Threading.Tasks;
 
 namespace Mechanix.Core.Data.Services
 {
-    interface IService<T>
+    public interface IService<T>
     {
         public Task<T> GetAsync(string id);
         public Task<List<T>> GetAllAsync();
         public Task<List<T>> GetAllFilteredAsync(Func<T, bool> comparator);
-        public Task Create(T model);
-        public Task Update(T model);
+        public Task CreateAsync(T model);
+        public Task UpdateAsync(T model);
+        public Task RemoveAsync(string id);
     }
 }

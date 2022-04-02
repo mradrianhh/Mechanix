@@ -20,7 +20,7 @@ namespace Mechanix.Core.Data.Services
             _cache = cache;
         }
 
-        public async Task Create(Part model)
+        public async Task CreateAsync(Part model)
         {
             await _collection.InsertOneAsync(model);
         }
@@ -57,9 +57,14 @@ namespace Mechanix.Core.Data.Services
             return parts.FirstOrDefault() ?? await _collection.FindAsync(part => part.Id == id).Result.FirstOrDefaultAsync();
         }
 
-        public async Task Update(Part model)
+        public async Task UpdateAsync(Part model)
         {
             await _collection.ReplaceOneAsync(part => part.Id == model.Id, model);
+        }
+
+        public async Task RemoveAsync(string id)
+        {
+            await _collection.DeleteOneAsync(part => part.Id == id);
         }
     }
 }
