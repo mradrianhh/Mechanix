@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
-using Mechanix.Core.Data.Models;
+using Mechanix.API.Core.Data.Models;
 
-namespace Mechanix.Core.Data
+namespace Mechanix.API.Core.Data
 {
     public class DbConnection : IDbConnection
     {

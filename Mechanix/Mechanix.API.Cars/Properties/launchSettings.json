@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Mechanix.API": {
+    "Mechanix.API.Cars": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

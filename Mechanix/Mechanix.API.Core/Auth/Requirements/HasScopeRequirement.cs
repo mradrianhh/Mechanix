@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mechanix.Core.Auth.Requirements
+namespace Mechanix.API.Core.Auth.Requirements
 {
     public class HasScopeRequirement : IAuthorizationRequirement
     {

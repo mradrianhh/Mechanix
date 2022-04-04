@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Mechanix.Core.Data.Services
+namespace Mechanix.API.Core.Data.Services
 {
     public interface IService<T>
     {

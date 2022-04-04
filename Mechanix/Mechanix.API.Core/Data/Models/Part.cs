@@ -1,7 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace Mechanix.Core.Data.Models
+namespace Mechanix.API.Core.Data.Models
 {
     public class Part
     {

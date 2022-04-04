@@ -1,4 +1,4 @@
-﻿using Mechanix.Core.Auth.Requirements;
+﻿using Mechanix.API.Core.Auth.Requirements;
 using Microsoft.AspNetCore.Authorization;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mechanix.Core.Auth.Handlers
+namespace Mechanix.API.Core.Auth.Handlers
 {
     public class HasScopeHandler : AuthorizationHandler<HasScopeRequirement>
     {

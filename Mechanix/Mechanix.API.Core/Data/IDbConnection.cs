@@ -1,7 +1,7 @@
-﻿using Mechanix.Core.Data.Models;
+﻿using Mechanix.API.Core.Data.Models;
 using MongoDB.Driver;
 
-namespace Mechanix.Core.Data
+namespace Mechanix.API.Core.Data
 {
     public interface IDbConnection
     {

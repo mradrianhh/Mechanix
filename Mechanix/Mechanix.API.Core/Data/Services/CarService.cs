@@ -1,4 +1,4 @@
-﻿using Mechanix.Core.Data.Models;
+﻿using Mechanix.API.Core.Data.Models;
 using Microsoft.Extensions.Caching.Memory;
 using MongoDB.Driver;
 using System;
@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Mechanix.Core.Data.Services
+namespace Mechanix.API.Core.Data.Services
 {
     public class CarService : IService<Car>
     {

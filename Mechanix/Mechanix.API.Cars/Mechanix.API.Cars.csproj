@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Mechanix.Core\Mechanix.Core.csproj" />
+    <ProjectReference Include="..\Mechanix.API.Core\Mechanix.API.Core.csproj" />
   </ItemGroup>
 
 </Project>

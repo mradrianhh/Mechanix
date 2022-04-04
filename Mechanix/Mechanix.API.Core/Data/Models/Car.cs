@@ -2,7 +2,7 @@
 using MongoDB.Bson.Serialization.Attributes;
 using System.Collections.Generic;
 
-namespace Mechanix.Core.Data.Models
+namespace Mechanix.API.Core.Data.Models
 {
     public class Car
     {

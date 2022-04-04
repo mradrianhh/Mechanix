@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Mechanix.Core.Data.Models;
+using Mechanix.API.Core.Data.Models;
 using Microsoft.Extensions.Caching.Memory;
 using MongoDB.Driver;
 
-namespace Mechanix.Core.Data.Services
+namespace Mechanix.API.Core.Data.Services
 {
     public class PartService : IService<Part>
     {

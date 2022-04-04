@@ -5,16 +5,16 @@ VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mechanix.Web", "Mechanix.Web\Mechanix.Web.csproj", "{0B081A0E-358F-4EA6-A248-C1AE322AFF1C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mechanix.Core", "Mechanix.Core\Mechanix.Core.csproj", "{8C3AC3D9-623B-4141-BA9C-4B456274812B}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{43A0C09B-C34D-4D96-8FA3-BABED1D20567}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mechanix.API", "Mechanix.API\Mechanix.API.csproj", "{02B7695E-2BE0-4567-B348-71AFD0B50BFB}"
-EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Mechanix.Admin", "Mechanix.Admin\Mechanix.Admin.esproj", "{93A8A166-B8DC-4FEE-941A-C4032B074820}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mechanix.API.Core", "Mechanix.API.Core\Mechanix.API.Core.csproj", "{12B8D91E-42D8-4F02-A3C5-F68FCC96B16E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mechanix.API.Cars", "Mechanix.API.Cars\Mechanix.API.Cars.csproj", "{2F4F4192-6115-4812-B994-66ABA830C440}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,20 +26,20 @@ Global
 		{0B081A0E-358F-4EA6-A248-C1AE322AFF1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B081A0E-358F-4EA6-A248-C1AE322AFF1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B081A0E-358F-4EA6-A248-C1AE322AFF1C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8C3AC3D9-623B-4141-BA9C-4B456274812B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8C3AC3D9-623B-4141-BA9C-4B456274812B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8C3AC3D9-623B-4141-BA9C-4B456274812B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8C3AC3D9-623B-4141-BA9C-4B456274812B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{02B7695E-2BE0-4567-B348-71AFD0B50BFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{02B7695E-2BE0-4567-B348-71AFD0B50BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{02B7695E-2BE0-4567-B348-71AFD0B50BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{02B7695E-2BE0-4567-B348-71AFD0B50BFB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{93A8A166-B8DC-4FEE-941A-C4032B074820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{93A8A166-B8DC-4FEE-941A-C4032B074820}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93A8A166-B8DC-4FEE-941A-C4032B074820}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{93A8A166-B8DC-4FEE-941A-C4032B074820}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93A8A166-B8DC-4FEE-941A-C4032B074820}.Release|Any CPU.Build.0 = Release|Any CPU
 		{93A8A166-B8DC-4FEE-941A-C4032B074820}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{12B8D91E-42D8-4F02-A3C5-F68FCC96B16E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12B8D91E-42D8-4F02-A3C5-F68FCC96B16E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12B8D91E-42D8-4F02-A3C5-F68FCC96B16E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12B8D91E-42D8-4F02-A3C5-F68FCC96B16E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F4F4192-6115-4812-B994-66ABA830C440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F4F4192-6115-4812-B994-66ABA830C440}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F4F4192-6115-4812-B994-66ABA830C440}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F4F4192-6115-4812-B994-66ABA830C440}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
