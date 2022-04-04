@@ -1,16 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './Components/App/App';
-import { Auth0Provider } from "@auth0/auth0-react"
+import { Auth0Provider } from '@auth0/auth0-react';
+import { render } from 'react-dom';
+import App from "./Components/App/App"
 
-ReactDOM.render(
-    <Auth0Provider
+function AppWithAuth0Provider(){
+    return(
+        <Auth0Provider
         domain="dev-4pw2cdab.us.auth0.com"
         clientId="Egk40ZVWhODHqWCIEpVvD5U0WzkRg0mK"
         redirectUri={window.location.origin}
-    >
-        <App />
-    </Auth0Provider>,
-  document.getElementById('root')
-);
+        >
+            <App />
+        </Auth0Provider>
+    );
+}
+
+const container = document.getElementById('root');
+render(<AppWithAuth0Provider />,container);
