@@ -1,15 +1,15 @@
+using Mechanix.API.Core.Auth.Handlers;
 using Mechanix.API.Core.Auth.Requirements;
 using Mechanix.API.Core.Data;
 using Mechanix.API.Core.Data.Models;
 using Mechanix.API.Core.Data.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 
 #region Configure
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddMemoryCache();
@@ -21,6 +21,8 @@ builder.Services.AddCors(options => {
     options.AddPolicy(name: MyAllowSpecificOrigins,
       builder => {
           builder.WithOrigins("*");
+          builder.WithHeaders("*");
+          builder.WithMethods("*");
       });
 });
 
@@ -31,14 +33,16 @@ builder.Services.AddAuthentication(options =>
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 }).AddJwtBearer(options =>
 {
-    options.Authority = "https://dev-4pw2cdab.us.auth0.com/";
-    options.Audience = "https://mechanix.com";
+    options.Authority = builder.Configuration["Auth0:Authority"];
+    options.Audience = builder.Configuration["Auth0:Audience"];
 });
 
 builder.Services.AddAuthorization(option =>
 {
-    option.AddPolicy("mechanix:read-write", policy => policy.Requirements.Add(new HasScopeRequirement("mechanix:read-write", builder.Configuration["Auth0:Domain"])));
+    option.AddPolicy("read:cars", policy => policy.Requirements.Add(new HasScopeRequirement("read:cars", builder.Configuration["Auth0:Domain"])));
 });
+
+builder.Services.AddSingleton<IAuthorizationHandler, HasScopeHandler>();
 
 builder.Services.AddSingleton<IDbConnection, DbConnection>();
 builder.Services.AddSingleton<IService<Car>, CarService>();
@@ -53,7 +57,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseCors(MyAllowSpecificOrigins);
 
@@ -64,15 +68,11 @@ app.UseAuthorization();
 
 #region Map routes
 
-#region Car data
-
-app.MapGet("/cars", async (IService<Car> service) => await service.GetAllAsync()).RequireAuthorization("mechanix:read-write");
-app.MapGet("/cars/{id}", async (IService<Car> service, string id) => await service.GetAsync(id)).RequireAuthorization("mechanix:read-write");
-app.MapPost("/cars", async (IService<Car> service, Car car) => await service.CreateAsync(car)).RequireAuthorization("mechanix:read-write");
-app.MapPut("/cars", async (IService<Car> service, Car car) => await service.UpdateAsync(car)).RequireAuthorization("mechanix:read-write");
-app.MapDelete("/cars/{id}", async (IService<Car> service, string id) => await service.RemoveAsync(id)).RequireAuthorization("mechanix:read-write");
-
-#endregion
+app.MapGet("/cars", async (IService<Car> service) => await service.GetAllAsync()).RequireAuthorization("read:cars");
+app.MapGet("/cars/{id}", async (IService<Car> service, string id) => await service.GetAsync(id)).RequireAuthorization("read:cars");
+app.MapPost("/cars", async (IService<Car> service, Car car) => await service.CreateAsync(car)).RequireAuthorization("read:cars");
+app.MapPut("/cars", async (IService<Car> service, Car car) => await service.UpdateAsync(car)).RequireAuthorization("read:cars");
+app.MapDelete("/cars/{id}", async (IService<Car> service, string id) => await service.RemoveAsync(id)).RequireAuthorization("read:cars");
 
 #endregion
 

@@ -8,6 +8,8 @@ function AppWithAuth0Provider(){
         domain="dev-4pw2cdab.us.auth0.com"
         clientId="Egk40ZVWhODHqWCIEpVvD5U0WzkRg0mK"
         redirectUri={window.location.origin}
+        audience="https://mechanix.com"
+        scope="read:cars"
         >
             <App />
         </Auth0Provider>
